@@ -3,8 +3,8 @@ FROM debian:latest
 RUN apt-get update && apt-get -y upgrade && \
     apt-get -y install apt-utils && \
     apt-get -y install python python3 python3-dev python3-pip tox \
-                               build-essential autoconf \
-                               git && \
+                       build-essential autoconf \
+                       git && \
     python -m pip install --upgrade pip && \
     apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists && \
