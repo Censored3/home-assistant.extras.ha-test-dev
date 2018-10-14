@@ -5,7 +5,7 @@ RUN apt-get update && apt-get -y upgrade && \
     apt-get -y install python3 python3-dev python3-pip tox \
                        build-essential autoconf \
                        git && \
-    python -m pip3 install --upgrade pip && \
+    python3 -m pip install --upgrade pip && \
     apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists && \
     cd /root && git clone https://github.com/Censored3/home-assistant && \
