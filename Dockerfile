@@ -10,4 +10,4 @@ RUN apt-get update && apt-get -y upgrade && \
     cd /root && git clone https://github.com/Censored3/home-assistant && \
     cd /root/home-assistant && git remote add upstream https://github.com/home-assistant/home-assistant.git
 
-CMD cd /root/home-assistant && git fetch && git reset --hard origin/dev
+CMD cd /root/home-assistant && git fetch && git reset --hard origin/dev && tox -r
