@@ -8,10 +8,10 @@ RUN apt-get update && apt-get -y upgrade && \
     python3 -m pip install --upgrade pip && \
     apt-get clean && apt-get autoclean && \
     rm -rf /var/lib/apt/lists && \
-    cd /root && git clone https://github.com/Censored3/home-assistant && \
-    cd /root/home-assistant && \
+    mkdir /data && \
+    cd /data && git clone https://github.com/Censored3/home-assistant && \
+    cd /data/home-assistant && \
         git remote add upstream https://github.com/home-assistant/home-assistant.git && \
         git checkout censored-dev
 
-
-CMD cd /root/home-assistant && git fetch && git reset --hard origin/censored-dev && tox -r
+CMD cd /data/home-assistant && git fetch && git reset --hard origin/censored-dev && tox -r
