@@ -14,7 +14,7 @@ RUN /bin/bash -c '\
     cd /data ; git clone https://github.com/Censored3/home-assistant ; \
     cd /data/home-assistant ; \
         git remote add upstream https://github.com/home-assistant/home-assistant.git ; \
-        git checkout censored-dev
+        git checkout censored-dev \
     '
 
 CMD cd /data/home-assistant ; git fetch ; git reset --hard origin/censored-dev ; tox -r
